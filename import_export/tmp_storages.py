@@ -38,8 +38,8 @@ class TempFolderStorage(BaseStorage):
         with self.open(mode=mode) as file:
             file.write(data)
 
-    def read(self, mode='r'):
-        with self.open(mode=mode) as file:
+    def read(self, mode='r',encoding='utf-8'):
+        with self.open(mode=mode,encoding=encoding) as file:
             return file.read()
 
     def remove(self):
